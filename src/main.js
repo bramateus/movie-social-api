@@ -2,6 +2,15 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import bootstrap from './assets/css/bootstrap.css'
+import vmodal from 'vue-js-modal'
+
+
+
+
+Vue.use(bootstrap);
+Vue.use(vmodal, { dynamicDefault: { draggable: true, resizable: true } })
+
 
 Vue.config.productionTip = false
 
