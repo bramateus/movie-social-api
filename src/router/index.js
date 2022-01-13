@@ -39,8 +39,15 @@ const routes = [
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  // base: process.env.BASE_URL,
+  base: '/movie-vue',
   routes
 })
 
 export default router
+
+
+
+    
+  // mode: "history",
+  // base: '/goomer-lista-rango',

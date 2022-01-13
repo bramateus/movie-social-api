@@ -9,7 +9,8 @@ export default new Vuex.Store({
     filmes_curtidos: [],
     filmes_nao_curtidos: [],
     filmes_nao_curados: [],
-    page: 1
+    total_pages: 1,
+    genero_page: 1
   },
   mutations: {
     UPDATE_LISTA_CURTIDAS(state, payload){
@@ -21,8 +22,11 @@ export default new Vuex.Store({
     UPDATE_LISTA_NAO_CURADOS(state, payload){
       state.filmes_nao_curados.push(payload);
     },
-    UPDATE_PAGE(state){
-      state.page++;
+    UPDATE_TOTAL_PAGES(state, payload){
+      state.total_pages = payload.total_pages;
+    },
+    UPDATE_GENERO_PAGE(state, payload){
+      state.genero_page += payload.genero_page;
     }
   },
   actions: {
